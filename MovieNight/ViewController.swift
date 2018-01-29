@@ -19,16 +19,17 @@ class ViewController: UIViewController, Resetable {
         return FlowManager(viewController: self)
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     // MARK: - Interface Builder Actions
     @IBAction func selectionButtonTapped(_ sender: Any) {
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
         reset()
+    }
+    
+    // MARK: - View Updating
+    func updateSelectionButton(for status: SelectionStatus) {
+        selectionButton.setTitle(status.buttonString, for: .normal)
     }
 }
 

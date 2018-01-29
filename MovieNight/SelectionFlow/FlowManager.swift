@@ -6,18 +6,16 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-import UIKit
-
 class FlowManager: Resetable {
-    let viewController: UIViewController
+    let viewController: ViewController
     
     var currentStatus: SelectionStatus {
         didSet {
-            // TODO: Call update method in VC for new status
+            viewController.updateSelectionButton(for: currentStatus)
         }
     }
     
-    init(viewController: UIViewController) {
+    init(viewController: ViewController) {
         self.viewController = viewController
         self.currentStatus = .firstPending
     }
