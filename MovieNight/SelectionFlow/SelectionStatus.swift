@@ -6,13 +6,13 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum SelectionStatus {
-    case firstPending
+enum SelectionStatus: Int {
+    case firstPending = 0
     case secondPending
     case complete
 }
 
-// MARK: - Button mapping for values
+// MARK: - Status button mapping
 extension SelectionStatus {
     var buttonString: String {
         switch self {
