@@ -54,10 +54,10 @@
 		4A7243EC201EF135003778CA /* MovieNight */ = {
 			isa = PBXGroup;
 			children = (
+				4A7243F4201EF135003778CA /* Assets.xcassets */,
 				4A7243ED201EF135003778CA /* AppDelegate.swift */,
 				4A7243EF201EF135003778CA /* ViewController.swift */,
 				4A7243F1201EF135003778CA /* Main.storyboard */,
-				4A7243F4201EF135003778CA /* Assets.xcassets */,
 				4A7243F6201EF135003778CA /* LaunchScreen.storyboard */,
 				4A7243F9201EF135003778CA /* Info.plist */,
 			);
