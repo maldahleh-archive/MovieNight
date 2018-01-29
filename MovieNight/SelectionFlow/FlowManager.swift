@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-class FlowManager: Resetable {
+class FlowManager: Updateable, Resetable {
     let viewController: ViewController
     
     var currentStatus: SelectionStatus {
@@ -21,8 +21,12 @@ class FlowManager: Resetable {
     }
 }
 
-// MARK: Resetable Protocol Implementation
+// MARK: - Protocol Implementation
 extension FlowManager {
+    func update() {
+        self.currentStatus = currentStatus.next()
+    }
+    
     func reset() {
          self.currentStatus = .firstPending
     }

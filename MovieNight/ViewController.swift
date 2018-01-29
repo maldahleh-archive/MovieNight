@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, Resetable {
+    private struct Keys {
+        static let UnselectedImage = "bubble-empty"
+    }
+    
     // MARK: - Interface Builder Outlets
     @IBOutlet weak var firstPersonStatus: UIImageView!
     @IBOutlet weak var secondPersonStatus: UIImageView!
@@ -21,6 +25,7 @@ class ViewController: UIViewController, Resetable {
     
     // MARK: - Interface Builder Actions
     @IBAction func selectionButtonTapped(_ sender: Any) {
+        flowManager.update()
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
@@ -36,10 +41,6 @@ class ViewController: UIViewController, Resetable {
 // MARK: - Resetable protocol implementation
 extension ViewController {
     func reset() {
-        struct Keys {
-            static let UnselectedImage = "bubble-empty"
-        }
-        
         firstPersonStatus.image = UIImage(named: Keys.UnselectedImage)
         secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
         

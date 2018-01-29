@@ -10,6 +10,11 @@ enum SelectionStatus: Int {
     case firstPending = 0
     case secondPending
     case complete
+    
+    func next() -> SelectionStatus {
+        let nextStatus = self.rawValue + 1
+        return SelectionStatus(rawValue: nextStatus)!
+    }
 }
 
 // MARK: - Status button mapping
