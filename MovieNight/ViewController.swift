@@ -8,18 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, Resetable {
+    // MARK: - Interface Builder Outlets
+    @IBOutlet weak var firstPersonStatus: UIImageView!
+    @IBOutlet weak var secondPersonStatus: UIImageView!
+    @IBOutlet weak var selectionButton: UIButton!
+    
+    // MARK: - Class properties
+    lazy var flowManager = {
+        return FlowManager(viewController: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Interface Builder Actions
+    @IBAction func selectionButtonTapped(_ sender: Any) {
     }
-
-
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        reset()
+    }
 }
 
+// MARK: - Resetable protocol implementation
+extension ViewController {
+    func reset() {
+        struct Keys {
+            static let UnselectedImage = "bubble-empty"
+        }
+        
+        firstPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+        secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+        
+        flowManager.reset()
+    }
+}

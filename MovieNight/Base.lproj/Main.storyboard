@@ -37,6 +37,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" name="Action"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQU-3G-Qy2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Header"/>
@@ -59,6 +62,9 @@
                                 <state key="normal" title="Begin Selection">
                                     <color key="titleColor" name="Text"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vt1-Dd-FWG"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="be4-It-LAG" userLabel="StatusStackView">
                                 <rect key="frame" x="0.0" y="152" width="320" height="97"/>
@@ -91,6 +97,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstPersonStatus" destination="8QH-6U-x0M" id="Tvi-nm-iIN"/>
+                        <outlet property="secondPersonStatus" destination="b2g-6A-lez" id="RU9-gv-e76"/>
+                        <outlet property="selectionButton" destination="cdr-tO-F6D" id="pCh-Kx-wDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
