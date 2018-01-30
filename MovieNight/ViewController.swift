@@ -32,11 +32,11 @@ class ViewController: UIViewController, Resetable {
     // MARK: - Interface Builder Actions
     @IBAction func selectionButtonTapped(_ sender: Any) {
         switch flowManager.currentStatus {
-        case .firstPending, .secondPending: performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
+        case .firstPending, .secondPending:
+            performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
+            flowManager.update()
         default: return
         }
-        
-        flowManager.update()
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
@@ -52,7 +52,9 @@ class ViewController: UIViewController, Resetable {
 // MARK: - Resetable protocol implementation
 extension ViewController {
     func reset() {
+        firstPreferences = nil
         firstPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+        secondPreferences = nil
         secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
         
         flowManager.reset()
