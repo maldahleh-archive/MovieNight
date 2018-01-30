@@ -11,6 +11,7 @@ import UIKit
 class PreferencesViewController: UIViewController, UITableViewDelegate {
     // MARK: - UI Outlets
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var genreTable: UITableView!
     
     // MARK: - Class Properties
@@ -30,6 +31,7 @@ class PreferencesViewController: UIViewController, UITableViewDelegate {
     // MARK: - UI Actions
     @IBAction func mediaTypeChanged(_ sender: UISegmentedControl) {
         preferences.updateType(with: sender.selectedSegmentIndex)
+        updateGenreLabel()
         genreTable.reloadData()
     }
     
@@ -41,9 +43,30 @@ class PreferencesViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+// MARK: - Table View Delegate
+extension PreferencesViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        if let index = preferences.selectedGenres.index(of: row) {
+            preferences.selectedGenres.remove(at: index)
+        } else {
+            if preferences.selectedGenres.count == 5 { return }
+            
+            preferences.selectedGenres.append(row)
+        }
+        
+        genreTable.reloadRows(at: [indexPath], with: .automatic)
+        updateGenreLabel()
+    }
+}
+
 // MARK: - UI Helper
 extension PreferencesViewController {
     func updateYearLabel(with value: Int) {
         yearLabel.text = "Newer Than (\(value))"
+    }
+    
+    func updateGenreLabel() {
+        genreLabel.text = "Genres (\(preferences.selectedGenres.count)/5)"
     }
 }

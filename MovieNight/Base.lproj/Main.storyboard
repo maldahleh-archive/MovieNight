@@ -296,6 +296,7 @@
                         <viewLayoutGuide key="safeArea" id="sIu-he-vUm"/>
                     </view>
                     <connections>
+                        <outlet property="genreLabel" destination="PUc-NI-FkU" id="1US-Y6-qAj"/>
                         <outlet property="genreTable" destination="h1P-uX-SOF" id="9tk-cJ-yek"/>
                         <outlet property="yearLabel" destination="Ld8-qi-CEj" id="NYb-EU-6Q5"/>
                     </connections>
