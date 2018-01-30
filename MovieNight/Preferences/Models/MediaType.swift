@@ -6,9 +6,9 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-enum MediaType {
-    case movies
-    case tvShows
+enum MediaType: String {
+    case movies = "movie"
+    case tvShows = "tv"
 }
 
 extension MediaType {
