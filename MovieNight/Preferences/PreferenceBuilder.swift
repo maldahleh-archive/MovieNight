@@ -15,7 +15,7 @@ extension Genre {
 }
 
 struct PreferenceBuilder {
-    let mediaType: Preferences.MediaType
+    let mediaType: MediaType
     let year: Int
     var genreList: [String] = []
     
@@ -48,7 +48,7 @@ struct PreferenceBuilder {
         return [
             URLQueryItem(name: "with_original_language", value: "en"),
             URLQueryItem(name: "with_genres", value: genreList.joined(separator: ",")),
-            URLQueryItem(name: mediaType.rawValue, value: String(year))
+            URLQueryItem(name: mediaType.yearQueryString, value: String(year))
         ]
     }
 }

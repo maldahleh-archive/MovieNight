@@ -9,11 +9,6 @@
 import Foundation
 
 class Preferences {
-    enum MediaType: String {
-        case movies = "primary_release_year"
-        case tvShows = "first_air_date_year"
-    }
-    
     var type: MediaType = .movies
     var year = 1900
     var selectedGenres = [Int]()
