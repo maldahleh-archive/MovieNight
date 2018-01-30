@@ -15,16 +15,15 @@ struct PreferenceBuilder {
     
     init?(setOne: Preferences, setTwo: Preferences) {
         if setOne.type != setTwo.type {
-            // TODO: Error, did not match
+            AlertPresenter.displayAlertWith(message: "You did not agree on the type of media to watch.")
             return nil
         }
         
         mediaType = setOne.type
         
-        // Find common genres between the two selected groups
         let intersectedGenres = Set(setOne.selectedGenres).intersection(Set(setTwo.selectedGenres))
         if intersectedGenres.isEmpty {
-            // TODO: Error, no genre matches
+            AlertPresenter.displayAlertWith(message: "You did not agree on any common genres.")
             return nil
         }
         
