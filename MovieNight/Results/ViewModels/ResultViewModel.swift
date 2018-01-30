@@ -9,10 +9,16 @@
 import UIKit
 
 struct ResultViewModel {
-    let mediaPoster: UIImage
+    let mediaPoster: UIImage? = nil
     let mediaName: String
     let mediaDescription: String
     let mediaYear: String
     
-    // TODO: Init from Result model
+    init(result: MediaResult) {
+        self.mediaName = result.title
+        self.mediaDescription = result.overview
+        self.mediaYear = result.release.components(separatedBy: "-").first!
+        
+        // TODO: Create image download request
+    }
 }
