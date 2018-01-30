@@ -203,8 +203,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="73r-61-FJJ" id="gD1-Qr-eh7"/>
-                                            <outlet property="movieLabel" destination="zPL-pH-jtc" id="SDf-aQ-Rra"/>
                                             <outlet property="posterView" destination="KU7-g2-qx8" id="kbx-hf-TKq"/>
+                                            <outlet property="titleLabel" destination="zPL-pH-jtc" id="23G-xy-Sxq"/>
                                             <outlet property="yearLabel" destination="DDn-UY-sw7" id="rCG-FF-15G"/>
                                         </connections>
                                     </tableViewCell>

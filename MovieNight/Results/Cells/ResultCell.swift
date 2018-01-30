@@ -13,11 +13,15 @@ class ResultCell: UITableViewCell {
 
     // MARK: - Interface Builder Outlets
     @IBOutlet weak var posterView: UIImageView!
-    @IBOutlet weak var movieLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Initalize view
+    func populateView(with model: ResultViewModel) {
+        posterView.image = model.mediaPoster
+        titleLabel.text = model.mediaName
+        descriptionLabel.text = model.mediaDescription
+        yearLabel.text = model.mediaYear
     }
 }
