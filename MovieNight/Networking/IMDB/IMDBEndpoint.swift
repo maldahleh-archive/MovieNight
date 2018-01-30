@@ -27,8 +27,7 @@ extension IMDB: Endpoint {
         switch self {
         case .discover(let preferences):
             var preferencesQuerySet = preferences.querySet()
-            // TODO: ADD API KEY
-            preferencesQuerySet.append(URLQueryItem(name: "api_key", value: nil))
+            preferencesQuerySet.append(URLQueryItem(name: "api_key", value: IMDBClient.apiKey))
             
             return preferencesQuerySet
         }

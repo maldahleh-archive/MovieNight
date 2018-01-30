@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, Resetable {
     private struct Keys {
         static let PreferencesSegue = "showPreferences"
+        static let ResultsSegue = "showResults"
         
         static let SelectedImage = "bubble-selected"
         static let UnselectedImage = "bubble-empty"
@@ -22,6 +23,7 @@ class ViewController: UIViewController, Resetable {
     @IBOutlet weak var selectionButton: UIButton!
     
     // MARK: - Class properties
+    let apiClient = IMDBClient()
     var firstPreferences: Preferences?
     var secondPreferences: Preferences?
     
@@ -49,15 +51,15 @@ class ViewController: UIViewController, Resetable {
     }
 }
 
-// MARK: - Resetable protocol implementation
+// MARK: - Segue
 extension ViewController {
-    func reset() {
-        firstPreferences = nil
-        firstPersonStatus.image = UIImage(named: Keys.UnselectedImage)
-        secondPreferences = nil
-        secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != Keys.ResultsSegue { return }
         
-        flowManager.reset()
+        let destination = segue.destination as! ResultsViewController
+        let results = sender as! [MediaResult]
+        
+        destination.dataSource.update(with: results)
     }
 }
 
@@ -84,6 +86,26 @@ extension ViewController {
             return
         }
         
-        // TODO: Display results
+        apiClient.discoverWith(preferences: combined) { result in
+            switch result {
+            case .failure(let error):
+                AlertPresenter.displayAlertWith(message: "Network failed, \(error.description).", viewController: self)
+                self.reset()
+            case .success(let media):
+                self.performSegue(withIdentifier: Keys.ResultsSegue, sender: media)
+            }
+        }
+    }
+}
+
+// MARK: - Resetable protocol implementation
+extension ViewController {
+    func reset() {
+        firstPreferences = nil
+        firstPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+        secondPreferences = nil
+        secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
+        
+        flowManager.reset()
     }
 }

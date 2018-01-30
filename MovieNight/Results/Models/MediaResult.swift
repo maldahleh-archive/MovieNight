@@ -6,13 +6,15 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
+import UIKit
+
 enum PosterArtworkState {
     case placeholder
     case downloaded
     case failed
 }
 
-struct MediaResult: JSONDecodable {
+class MediaResult: JSONDecodable {
     let posterEndpoint: String
     let title: String
     let overview: String
@@ -20,11 +22,9 @@ struct MediaResult: JSONDecodable {
     
     var poster: UIImage?
     var posterState: PosterArtworkState = .placeholder
-}
-
-extension MediaResult {
-    init?(json: JSON, mediaType: MediaType) {
-        guard let posterEndpoint = json[mediaType.posterJsonKey], let title = json[mediaType.titleJsonKey], let overview = json[mediaType.overviewJsonKey], let release = json[mediaType.yearJsonKey] else {
+    
+    required init?(json: JSON, mediaType: MediaType) {
+        guard let posterEndpoint = json[mediaType.posterJsonKey] as? String, let title = json[mediaType.titleJsonKey] as? String, let overview = json[mediaType.overviewJsonKey] as? String, let release = json[mediaType.yearJsonKey] as? String else {
             return nil
         }
         

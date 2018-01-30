@@ -11,14 +11,13 @@ import UIKit
 class ResultsDataSource: NSObject, UITableViewDataSource {
     private var results: [MediaResult]
     
+    let controller: ResultsViewController
     let pendingOperations = PendingOperations()
-    let tableView: UITableView
     
-    init(results: [MediaResult], tableView: UITableView) {
+    init(results: [MediaResult], controller: ResultsViewController) {
         self.results = results
-        self.tableView = tableView
+        self.controller = controller
         
-        tableView.dataSource = self
         super.init()
     }
     
@@ -40,25 +39,25 @@ class ResultsDataSource: NSObject, UITableViewDataSource {
         cell.populateView(with: viewModel)
         
         if result.posterState == .placeholder {
-            // TODO: Download
+            downloadPosterForResult(result, atIndexPath: indexPath)
         }
         
         return cell
     }
     
     // MARK: - Helper
-    func downloadArtworkForResult(_ result: MediaResult, atIndexPath indexPath: IndexPath) {
+    func downloadPosterForResult(_ result: MediaResult, atIndexPath indexPath: IndexPath) {
         if let _ = pendingOperations.downloadsInProgress[indexPath] {
             return
         }
         
-        let downloader = ArtworkDownloader(album: album)
+        let downloader = PosterDownloader(result: result)
         downloader.completionBlock = {
             if downloader.isCancelled { return }
             
             DispatchQueue.main.async {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
-                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+                self.controller.tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         }
         
@@ -66,7 +65,7 @@ class ResultsDataSource: NSObject, UITableViewDataSource {
         pendingOperations.downloadQueue.addOperation(downloader)
     }
     
-    func update(with albums: [Album]) {
-        self.albums = albums
+    func update(with results: [MediaResult]) {
+        self.results = results
     }
 }

@@ -13,5 +13,5 @@ protocol JSONDecodable {
     ///
     /// Returns `nil` if the JSON dictionary does not contain all the values
     /// needed for instantiation of the conforming type
-    init?(json: JSON)
+    init?(json: JSON, mediaType: MediaType)
 }

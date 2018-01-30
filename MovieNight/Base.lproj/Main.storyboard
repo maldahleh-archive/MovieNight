@@ -103,6 +103,7 @@
                         <outlet property="secondPersonStatus" destination="b2g-6A-lez" id="RU9-gv-e76"/>
                         <outlet property="selectionButton" destination="cdr-tO-F6D" id="pCh-Kx-wDa"/>
                         <segue destination="0Ky-H5-f5O" kind="presentation" identifier="showPreferences" id="mlp-f4-jFx"/>
+                        <segue destination="h1v-gs-glh" kind="show" identifier="showResults" id="KQy-T2-ewk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,6 +133,9 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" name="Action"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="zmL-me-Xd6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Header"/>
@@ -223,6 +227,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uYf-5S-8uW"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="OYC-fK-Gj6" id="b7f-FH-pij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRe-Ss-aRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
