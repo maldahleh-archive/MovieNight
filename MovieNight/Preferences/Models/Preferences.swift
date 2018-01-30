@@ -12,7 +12,7 @@ class Preferences {
         case tvShows
     }
     
-    var type = MediaType.movies
+    var type: MediaType = .movies
     var year = 1900
     var selectedGenres = [Int]()
     

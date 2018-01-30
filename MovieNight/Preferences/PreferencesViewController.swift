@@ -15,7 +15,7 @@ class PreferencesViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var genreTable: UITableView!
     
     // MARK: - Class Properties
-    var preferences = Preferences()
+    let preferences = Preferences()
     
     lazy var dataSource = {
         return GenreDataSource(preferences: preferences)
