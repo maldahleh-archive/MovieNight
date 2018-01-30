@@ -148,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="113" id="MiW-D1-lmW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="113" id="MiW-D1-lmW" customClass="ResultCell" customModule="MovieNight" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MiW-D1-lmW" id="WUR-Wa-pEU">
@@ -201,6 +201,12 @@
                                                 <constraint firstItem="KU7-g2-qx8" firstAttribute="leading" secondItem="WUR-Wa-pEU" secondAttribute="leading" id="x97-TH-huy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="73r-61-FJJ" id="gD1-Qr-eh7"/>
+                                            <outlet property="movieLabel" destination="zPL-pH-jtc" id="SDf-aQ-Rra"/>
+                                            <outlet property="posterView" destination="KU7-g2-qx8" id="kbx-hf-TKq"/>
+                                            <outlet property="yearLabel" destination="DDn-UY-sw7" id="rCG-FF-15G"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -20,6 +20,7 @@
 		4A7243F3201EF135003778CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7243F1201EF135003778CA /* Main.storyboard */; };
 		4A7243F5201EF135003778CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7243F4201EF135003778CA /* Assets.xcassets */; };
 		4A7243F8201EF135003778CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7243F6201EF135003778CA /* LaunchScreen.storyboard */; };
+		4A8A487E20210250004A0D46 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A487D20210250004A0D46 /* ResultCell.swift */; };
 		4AB487ED201FCA0C0082E94B /* SelectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */; };
 		4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EE201FCB690082E94B /* FlowManager.swift */; };
 		4AB487F2201FCD880082E94B /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F1201FCD880082E94B /* Resetable.swift */; };
@@ -48,6 +49,7 @@
 		4A7243F4201EF135003778CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A7243F7201EF135003778CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A7243F9201EF135003778CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8A487D20210250004A0D46 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionStatus.swift; sourceTree = "<group>"; };
 		4AB487EE201FCB690082E94B /* FlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		4AB487F1201FCD880082E94B /* Resetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		4A39C0852020482100A3A7D6 /* Results */ = {
 			isa = PBXGroup;
 			children = (
+				4A8A487C2021022A004A0D46 /* Cells */,
 				4A39C0862020484400A3A7D6 /* ResultsViewController.swift */,
 			);
 			path = Results;
@@ -148,6 +151,14 @@
 				4A7243F9201EF135003778CA /* Info.plist */,
 			);
 			path = MovieNight;
+			sourceTree = "<group>";
+		};
+		4A8A487C2021022A004A0D46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A487D20210250004A0D46 /* ResultCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4AB487EB201FC9F70082E94B /* SelectionFlow */ = {
@@ -283,6 +294,7 @@
 				4A7243F0201EF135003778CA /* ViewController.swift in Sources */,
 				4A39C0872020484400A3A7D6 /* ResultsViewController.swift in Sources */,
 				4A39C07D202037A700A3A7D6 /* APIError.swift in Sources */,
+				4A8A487E20210250004A0D46 /* ResultCell.swift in Sources */,
 				4AB487F2201FCD880082E94B /* Resetable.swift in Sources */,
 				4A39C08420203FA000A3A7D6 /* AlertPresenter.swift in Sources */,
 				4A39C0782020373400A3A7D6 /* Endpoint.swift in Sources */,
