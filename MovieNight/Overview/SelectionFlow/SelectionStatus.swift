@@ -21,8 +21,8 @@ enum SelectionStatus: Int {
 extension SelectionStatus {
     var buttonString: String {
         switch self {
-        case .firstPending: return "Begin Selection"
-        case .secondPending: return "Continue Selection"
+        case .firstPending: return "1st Person Select"
+        case .secondPending: return "2nd Person Select"
         case .complete: return "View Results"
         }
     }
