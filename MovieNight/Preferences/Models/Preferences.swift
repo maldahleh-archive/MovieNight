@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
-struct Preferences {
+class Preferences {
     enum MediaType {
         case movies
         case tvShows
@@ -14,8 +14,11 @@ struct Preferences {
     
     var type = MediaType.movies
     var year = 1900
+    var selectedGenres = [Int]()
     
-    mutating func updateType(with value: Int) {
+    func updateType(with value: Int) {
+        selectedGenres = []
+        
         switch value {
         case 0: type = .movies
         case 1: type = .tvShows

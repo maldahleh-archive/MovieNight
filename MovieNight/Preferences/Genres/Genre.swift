@@ -7,7 +7,7 @@
 //
 
 protocol Genre {
-    var count: Int { get }
+    static var Count: Int { get }
     var name: String { get }
     var id: Int { get }
 }
