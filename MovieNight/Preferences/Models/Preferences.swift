@@ -6,6 +6,8 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
+import Foundation
+
 class Preferences {
     enum MediaType {
         case movies

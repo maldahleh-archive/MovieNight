@@ -35,7 +35,7 @@ class ViewController: UIViewController, Resetable {
         case .firstPending, .secondPending:
             performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
             flowManager.update()
-        default: return
+        default: return // TODO: View results button
         }
     }
     
