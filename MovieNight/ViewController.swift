@@ -27,10 +27,18 @@ class ViewController: UIViewController, Resetable {
     var firstPreferences: Preferences?
     var secondPreferences: Preferences?
     
+    lazy var flowManager = {
+        return FlowManager(viewController: self)
+    }()
+    
     // MARK: - Interface Builder Actions
     @IBAction func selectionButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
-        flowManager.update()
+        switch flowManager.currentStatus {
+        case .firstPending, .secondPending:
+            performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
+            flowManager.update()
+        case .complete: displayResults()
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
@@ -64,8 +72,6 @@ extension ViewController {
         } else if secondPreferences == nil {
             secondPreferences = preferences
             secondPersonStatus.image = UIImage(named: Keys.SelectedImage)
-            
-            displayResults()
         }
     }
     
