@@ -14,6 +14,8 @@ class GenreDataSource: NSObject, UITableViewDataSource {
     
     init(preferences: Preferences) {
         self.preferences = preferences
+        
+        super.init()
     }
     
     // MARK: - Data Source

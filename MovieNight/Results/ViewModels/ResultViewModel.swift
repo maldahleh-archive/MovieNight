@@ -8,8 +8,7 @@
 
 import UIKit
 
-struct ResultViewModel {
-    let mediaPoster: UIImage? = nil
+class ResultViewModel {
     let mediaName: String
     let mediaDescription: String
     let mediaYear: String
