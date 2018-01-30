@@ -184,15 +184,26 @@
                                                             <color key="textColor" name="Action"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDn-UY-sw7" userLabel="YearLabel">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niA-If-SwR" userLabel="InfoStack">
                                                             <rect key="frame" x="0.0" y="73" width="222" height="18"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 0/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6Z-wy-Pf4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" name="Header"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Year" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDn-UY-sw7" userLabel="YearLabel">
+                                                                    <rect key="frame" x="82" y="0.0" width="140" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" name="Header"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="i1G-qt-oNX"/>
+                                                                <constraint firstAttribute="height" constant="18" id="pzi-zM-WZ9"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" name="Header"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -208,6 +219,7 @@
                                         <connections>
                                             <outlet property="descriptionLabel" destination="73r-61-FJJ" id="gD1-Qr-eh7"/>
                                             <outlet property="posterView" destination="KU7-g2-qx8" id="kbx-hf-TKq"/>
+                                            <outlet property="ratingLabel" destination="z6Z-wy-Pf4" id="zu5-Mw-jYK"/>
                                             <outlet property="titleLabel" destination="zPL-pH-jtc" id="23G-xy-Sxq"/>
                                             <outlet property="yearLabel" destination="DDn-UY-sw7" id="rCG-FF-15G"/>
                                         </connections>

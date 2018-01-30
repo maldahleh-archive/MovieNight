@@ -18,19 +18,21 @@ class MediaResult: JSONDecodable {
     let posterEndpoint: String
     let title: String
     let overview: String
+    let rating: String
     let release: String
     
     var poster: UIImage?
     var posterState: PosterArtworkState = .placeholder
     
     required init?(json: JSON, mediaType: MediaType) {
-        guard let posterEndpoint = json[mediaType.posterJsonKey] as? String, let title = json[mediaType.titleJsonKey] as? String, let overview = json[mediaType.overviewJsonKey] as? String, let release = json[mediaType.yearJsonKey] as? String else {
+        guard let posterEndpoint = json[mediaType.posterJsonKey] as? String, let title = json[mediaType.titleJsonKey] as? String, let overview = json[mediaType.overviewJsonKey] as? String, let rating = json[mediaType.avereageRatingJsonKey] as? Double, let release = json[mediaType.yearJsonKey] as? String else {
             return nil
         }
         
         self.posterEndpoint = posterEndpoint
         self.title = title
         self.overview = overview
+        self.rating = String(rating)
         self.release = release
     }
 }

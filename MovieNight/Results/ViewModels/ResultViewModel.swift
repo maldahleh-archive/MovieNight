@@ -11,6 +11,7 @@ import UIKit
 class ResultViewModel {
     let mediaName: String
     let mediaDescription: String
+    let mediaRating: String
     let mediaYear: String
     
     var mediaPoster: UIImage? = nil
@@ -18,6 +19,7 @@ class ResultViewModel {
     init(result: MediaResult) {
         self.mediaName = result.title
         self.mediaDescription = result.overview
+        self.mediaRating = result.rating
         self.mediaYear = result.release.components(separatedBy: "-").first!
         
         if let poster = result.poster {

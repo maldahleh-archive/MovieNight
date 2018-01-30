@@ -37,6 +37,10 @@ extension MediaType {
         return "overview"
     }
     
+    var avereageRatingJsonKey: String {
+        return "vote_average"
+    }
+    
     var yearJsonKey: String {
         switch self {
         case .movies: return "release_date"

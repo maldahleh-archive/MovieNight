@@ -15,12 +15,14 @@ class ResultCell: UITableViewCell {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     
     // MARK: - Initalize view
     func populateView(with model: ResultViewModel) {
         titleLabel.text = model.mediaName
         descriptionLabel.text = model.mediaDescription
+        ratingLabel.text = "Rating: \(model.mediaRating)/10"
         yearLabel.text = model.mediaYear
         
         if let poster = model.mediaPoster {
