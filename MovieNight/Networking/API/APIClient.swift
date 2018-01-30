@@ -9,7 +9,8 @@
 import Foundation
 
 protocol APIClient {
-    var apiKey: String { get }
+    static var apiKey: String { get }
+    
     var session: URLSession { get }
     
     func fetch<T: JSONDecodable>(with request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (Result<T, APIError>) -> Void)

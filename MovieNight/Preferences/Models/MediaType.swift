@@ -19,3 +19,28 @@ extension MediaType {
         }
     }
 }
+
+// MARK: - JSON keys
+extension MediaType {
+    var posterJsonKey: String {
+        return "poster_path"
+    }
+    
+    var titleJsonKey: String {
+        switch self {
+        case .movies: return "title"
+        case .tvShows: return "name"
+        }
+    }
+    
+    var overviewJsonKey: String {
+        return "overview"
+    }
+    
+    var yearJsonKey: String {
+        switch self {
+        case .movies: return "release_date"
+        case .tvShows: return "first_air_date"
+        }
+    }
+}

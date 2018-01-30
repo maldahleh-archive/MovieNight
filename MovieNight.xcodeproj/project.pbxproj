@@ -24,6 +24,8 @@
 		4A8A48812021039A004A0D46 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A48802021039A004A0D46 /* ResultViewModel.swift */; };
 		4A8A488320210CD8004A0D46 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A488220210CD8004A0D46 /* MediaType.swift */; };
 		4A8A488620211471004A0D46 /* IMDBEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A488520211471004A0D46 /* IMDBEndpoint.swift */; };
+		4A8A4888202116BE004A0D46 /* IMDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A4887202116BE004A0D46 /* IMDBClient.swift */; };
+		4A8A488B202117F6004A0D46 /* MediaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A488A202117F6004A0D46 /* MediaResult.swift */; };
 		4AB487ED201FCA0C0082E94B /* SelectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */; };
 		4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EE201FCB690082E94B /* FlowManager.swift */; };
 		4AB487F2201FCD880082E94B /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F1201FCD880082E94B /* Resetable.swift */; };
@@ -56,6 +58,8 @@
 		4A8A48802021039A004A0D46 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		4A8A488220210CD8004A0D46 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		4A8A488520211471004A0D46 /* IMDBEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBEndpoint.swift; sourceTree = "<group>"; };
+		4A8A4887202116BE004A0D46 /* IMDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBClient.swift; sourceTree = "<group>"; };
+		4A8A488A202117F6004A0D46 /* MediaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaResult.swift; sourceTree = "<group>"; };
 		4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionStatus.swift; sourceTree = "<group>"; };
 		4AB487EE201FCB690082E94B /* FlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		4AB487F1201FCD880082E94B /* Resetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				4A8A487C2021022A004A0D46 /* Cells */,
+				4A8A4889202117EA004A0D46 /* Models */,
 				4A8A487F20210386004A0D46 /* ViewModels */,
 				4A39C0862020484400A3A7D6 /* ResultsViewController.swift */,
 			);
@@ -180,9 +185,18 @@
 		4A8A48842021145E004A0D46 /* IMDB */ = {
 			isa = PBXGroup;
 			children = (
+				4A8A4887202116BE004A0D46 /* IMDBClient.swift */,
 				4A8A488520211471004A0D46 /* IMDBEndpoint.swift */,
 			);
 			path = IMDB;
+			sourceTree = "<group>";
+		};
+		4A8A4889202117EA004A0D46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A488A202117F6004A0D46 /* MediaResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4AB487EB201FC9F70082E94B /* SelectionFlow */ = {
@@ -322,11 +336,13 @@
 				4A39C0872020484400A3A7D6 /* ResultsViewController.swift in Sources */,
 				4A39C07D202037A700A3A7D6 /* APIError.swift in Sources */,
 				4A8A488320210CD8004A0D46 /* MediaType.swift in Sources */,
+				4A8A4888202116BE004A0D46 /* IMDBClient.swift in Sources */,
 				4A8A487E20210250004A0D46 /* ResultCell.swift in Sources */,
 				4AB487F2201FCD880082E94B /* Resetable.swift in Sources */,
 				4A39C08420203FA000A3A7D6 /* AlertPresenter.swift in Sources */,
 				4A39C0782020373400A3A7D6 /* Endpoint.swift in Sources */,
 				4AB4880420200FF40082E94B /* GenreDataSource.swift in Sources */,
+				4A8A488B202117F6004A0D46 /* MediaResult.swift in Sources */,
 				4A39C07B2020378C00A3A7D6 /* Result.swift in Sources */,
 				4A7243EE201EF135003778CA /* AppDelegate.swift in Sources */,
 				4AB487F7202001440082E94B /* PreferencesViewController.swift in Sources */,
