@@ -41,4 +41,20 @@ struct PreferenceBuilder {
         // Searching year is the greater (more recent of the two selected years)
         year = setOne.year > setTwo.year ? setOne.year : setTwo.year
     }
+    
+    func querySet() -> [URLQueryItem] {
+        let genreIds = genreList.map({ String($0.id) }).joined(separator: ",")
+        
+        var yearQueryItem: URLQueryItem!
+        switch mediaType {
+        case .movies: yearQueryItem = URLQueryItem(name: "primary_release_year", value: String(year))
+        case .tvShows: yearQueryItem = URLQueryItem(name: "first_air_date_year", value: String(year))
+        }
+        
+        return [
+            URLQueryItem(name: "with_original_language", value: "en"),
+            URLQueryItem(name: "with_genres", value: genreIds),
+            yearQueryItem
+        ]
+    }
 }
