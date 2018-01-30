@@ -21,7 +21,7 @@ class PosterDownloader: Operation {
     override func main() {
         if isCancelled { return }
         
-        guard let url = URL(string: "https://image.tmdb.org/t/p/w75\(result.posterEndpoint)") else { return }
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w300\(result.posterEndpoint)") else { return }
         
         do {
             let imageData = try Data(contentsOf: url)

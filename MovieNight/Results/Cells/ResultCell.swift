@@ -19,9 +19,12 @@ class ResultCell: UITableViewCell {
     
     // MARK: - Initalize view
     func populateView(with model: ResultViewModel) {
-        // TODO: POSTER
         titleLabel.text = model.mediaName
         descriptionLabel.text = model.mediaDescription
         yearLabel.text = model.mediaYear
+        
+        if let poster = model.mediaPoster {
+            posterView.image = poster
+        }
     }
 }

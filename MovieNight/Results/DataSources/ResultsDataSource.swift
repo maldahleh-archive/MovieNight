@@ -39,9 +39,9 @@ class ResultsDataSource: NSObject, UITableViewDataSource {
         
         cell.populateView(with: viewModel)
         
-//        if result.posterState == .placeholder {
-//            downloadPosterForResult(result, atIndexPath: indexPath)
-//        }
+        if result.posterState == .placeholder {
+            downloadPosterForResult(result, atIndexPath: indexPath)
+        }
         
         return cell
     }

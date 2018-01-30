@@ -159,7 +159,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KU7-g2-qx8" userLabel="MediaPoster">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KU7-g2-qx8" userLabel="MediaPoster">
                                                     <rect key="frame" x="0.0" y="-0.5" width="75" height="113.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="59s-xO-d5G"/>

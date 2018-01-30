@@ -13,11 +13,15 @@ class ResultViewModel {
     let mediaDescription: String
     let mediaYear: String
     
+    var mediaPoster: UIImage? = nil
+    
     init(result: MediaResult) {
         self.mediaName = result.title
         self.mediaDescription = result.overview
         self.mediaYear = result.release.components(separatedBy: "-").first!
         
-        // TODO: Create image download request
+        if let poster = result.poster {
+            mediaPoster = poster
+        }
     }
 }
