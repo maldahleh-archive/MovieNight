@@ -8,20 +8,29 @@
 
 import UIKit
 
-class PreferencesViewController: UIViewController {
+class PreferencesViewController: UIViewController, UITableViewDelegate {
     // MARK: - UI Outlets
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var genreTable: UITableView!
     
     // MARK: - Class Properties
     var preferences = Preferences()
     
+    lazy var dataSource = {
+        return GenreDataSource(preferences: preferences)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        genreTable.dataSource = dataSource
+        genreTable.delegate = self
     }
 
     // MARK: - UI Actions
     @IBAction func mediaTypeChanged(_ sender: UISegmentedControl) {
-        preferences.updateType(with: sender.tag)
+        preferences.updateType(with: sender.selectedSegmentIndex)
+        genreTable.reloadData()
     }
     
     @IBAction func yearValueChanged(_ sender: UISlider) {

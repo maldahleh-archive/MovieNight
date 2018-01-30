@@ -170,7 +170,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-2o-Wa6" userLabel="TypeView">
                                         <rect key="frame" x="0.0" y="30" width="320" height="29"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rib-HM-YLC">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rib-HM-YLC">
                                                 <rect key="frame" x="8" y="0.0" width="304" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="gby-o1-n7S"/>
@@ -296,6 +296,7 @@
                         <viewLayoutGuide key="safeArea" id="sIu-he-vUm"/>
                     </view>
                     <connections>
+                        <outlet property="genreTable" destination="h1P-uX-SOF" id="9tk-cJ-yek"/>
                         <outlet property="yearLabel" destination="Ld8-qi-CEj" id="NYb-EU-6Q5"/>
                     </connections>
                 </viewController>
