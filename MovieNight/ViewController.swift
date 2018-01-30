@@ -59,7 +59,7 @@ extension ViewController {
         let destination = segue.destination as! ResultsViewController
         let results = sender as! [MediaResult]
         
-        destination.dataSource.update(with: results)
+        destination.results = results
     }
 }
 

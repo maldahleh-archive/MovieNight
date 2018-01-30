@@ -18,8 +18,10 @@ class ResultsViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Class properties
     lazy var dataSource: ResultsDataSource = {
-        return ResultsDataSource(results: [], controller: self)
+        return ResultsDataSource(results: results, controller: self)
     }()
+    
+    var results: [MediaResult]!
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -14,8 +14,8 @@ enum MediaType: String {
 extension MediaType {
     var yearQueryString: String {
         switch self {
-        case .movies: return "primary_release_year"
-        case .tvShows: return "first_air_date_year"
+        case .movies: return "primary_release_date.gte"
+        case .tvShows: return "first_air_date.gte"
         }
     }
 }
