@@ -16,6 +16,8 @@
 		4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EE201FCB690082E94B /* FlowManager.swift */; };
 		4AB487F2201FCD880082E94B /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F1201FCD880082E94B /* Resetable.swift */; };
 		4AB487F4201FD3920082E94B /* Updateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F3201FD3920082E94B /* Updateable.swift */; };
+		4AB487F7202001440082E94B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F6202001440082E94B /* PreferencesViewController.swift */; };
+		4AB487FA202002BB0082E94B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F9202002BB0082E94B /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4AB487EE201FCB690082E94B /* FlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		4AB487F1201FCD880082E94B /* Resetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
 		4AB487F3201FD3920082E94B /* Updateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updateable.swift; sourceTree = "<group>"; };
+		4AB487F6202001440082E94B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		4AB487F9202002BB0082E94B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7243F4201EF135003778CA /* Assets.xcassets */,
+				4AB487F5202001220082E94B /* Preferences */,
 				4AB487EB201FC9F70082E94B /* SelectionFlow */,
 				4AB487F0201FCD7C0082E94B /* Utilities */,
 				4A7243ED201EF135003778CA /* AppDelegate.swift */,
@@ -90,6 +95,23 @@
 				4AB487F1201FCD880082E94B /* Resetable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4AB487F5202001220082E94B /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				4AB487F8202002AA0082E94B /* Models */,
+				4AB487F6202001440082E94B /* PreferencesViewController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		4AB487F8202002AA0082E94B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AB487F9202002BB0082E94B /* Preferences.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +191,8 @@
 				4A7243F0201EF135003778CA /* ViewController.swift in Sources */,
 				4AB487F2201FCD880082E94B /* Resetable.swift in Sources */,
 				4A7243EE201EF135003778CA /* AppDelegate.swift in Sources */,
+				4AB487F7202001440082E94B /* PreferencesViewController.swift in Sources */,
+				4AB487FA202002BB0082E94B /* Preferences.swift in Sources */,
 				4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

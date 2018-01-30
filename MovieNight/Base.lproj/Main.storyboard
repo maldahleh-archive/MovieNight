@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Preferences View Controller-->
         <scene sceneID="BH6-1d-evp">
             <objects>
-                <viewController id="0Ky-H5-f5O" sceneMemberID="viewController">
+                <viewController id="0Ky-H5-f5O" customClass="PreferencesViewController" customModule="MovieNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bua-Ne-JcT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +218,9 @@
                                                 <color key="minimumTrackTintColor" name="Action"/>
                                                 <color key="maximumTrackTintColor" name="Text"/>
                                                 <color key="thumbTintColor" name="Text"/>
+                                                <connections>
+                                                    <action selector="yearValueChanged:" destination="0Ky-H5-f5O" eventType="valueChanged" id="1Qq-vp-ZMS"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" name="Header"/>
@@ -287,6 +290,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sIu-he-vUm"/>
                     </view>
+                    <connections>
+                        <outlet property="yearLabel" destination="Ld8-qi-CEj" id="NYb-EU-6Q5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opD-a3-7wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
