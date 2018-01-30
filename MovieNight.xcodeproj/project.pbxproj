@@ -14,6 +14,7 @@
 		4A39C07F202037D300A3A7D6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39C07E202037D300A3A7D6 /* APIClient.swift */; };
 		4A39C081202039DE00A3A7D6 /* PreferenceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39C080202039DE00A3A7D6 /* PreferenceBuilder.swift */; };
 		4A39C08420203FA000A3A7D6 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39C08320203FA000A3A7D6 /* AlertPresenter.swift */; };
+		4A39C0872020484400A3A7D6 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39C0862020484400A3A7D6 /* ResultsViewController.swift */; };
 		4A7243EE201EF135003778CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7243ED201EF135003778CA /* AppDelegate.swift */; };
 		4A7243F0201EF135003778CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7243EF201EF135003778CA /* ViewController.swift */; };
 		4A7243F3201EF135003778CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7243F1201EF135003778CA /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		4A39C07E202037D300A3A7D6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4A39C080202039DE00A3A7D6 /* PreferenceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceBuilder.swift; sourceTree = "<group>"; };
 		4A39C08320203FA000A3A7D6 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		4A39C0862020484400A3A7D6 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		4A7243EA201EF135003778CA /* MovieNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7243ED201EF135003778CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A7243EF201EF135003778CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		4A39C0852020482100A3A7D6 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4A39C0862020484400A3A7D6 /* ResultsViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		4A7243E1201EF135003778CA = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				4A7243F4201EF135003778CA /* Assets.xcassets */,
 				4A39C08220203F9200A3A7D6 /* Alerts */,
 				4AB487F5202001220082E94B /* Preferences */,
+				4A39C0852020482100A3A7D6 /* Results */,
 				4AB487EB201FC9F70082E94B /* SelectionFlow */,
 				4A39C0702020356000A3A7D6 /* Networking */,
 				4AB487F0201FCD7C0082E94B /* Utilities */,
@@ -270,6 +281,7 @@
 				4AB487F4201FD3920082E94B /* Updateable.swift in Sources */,
 				4AB487ED201FCA0C0082E94B /* SelectionStatus.swift in Sources */,
 				4A7243F0201EF135003778CA /* ViewController.swift in Sources */,
+				4A39C0872020484400A3A7D6 /* ResultsViewController.swift in Sources */,
 				4A39C07D202037A700A3A7D6 /* APIError.swift in Sources */,
 				4AB487F2201FCD880082E94B /* Resetable.swift in Sources */,
 				4A39C08420203FA000A3A7D6 /* AlertPresenter.swift in Sources */,

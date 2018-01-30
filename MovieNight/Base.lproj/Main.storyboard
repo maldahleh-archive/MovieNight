@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="IFX-FU-SfD">
             <objects>
-                <viewController id="h1v-gs-glh" sceneMemberID="viewController">
+                <viewController id="h1v-gs-glh" customClass="ResultsViewController" customModule="MovieNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xFc-Nj-ZpG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
