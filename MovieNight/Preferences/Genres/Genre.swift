@@ -8,6 +8,7 @@
 
 protocol Genre {
     static var Count: Int { get }
+    
     var name: String { get }
     var id: Int { get }
 }
