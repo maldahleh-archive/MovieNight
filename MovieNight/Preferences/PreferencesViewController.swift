@@ -13,13 +13,17 @@ class PreferencesViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     
     // MARK: - Class Properties
-    let preferences = Preferences()
+    var preferences = Preferences()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     // MARK: - UI Actions
+    @IBAction func mediaTypeChanged(_ sender: UISegmentedControl) {
+        preferences.updateType(with: sender.tag)
+    }
+    
     @IBAction func yearValueChanged(_ sender: UISlider) {
         let newYear = Int(sender.value)
         

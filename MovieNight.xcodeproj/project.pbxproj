@@ -18,6 +18,8 @@
 		4AB487F4201FD3920082E94B /* Updateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F3201FD3920082E94B /* Updateable.swift */; };
 		4AB487F7202001440082E94B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F6202001440082E94B /* PreferencesViewController.swift */; };
 		4AB487FA202002BB0082E94B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F9202002BB0082E94B /* Preferences.swift */; };
+		4AB487FD202009710082E94B /* MovieGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487FC202009710082E94B /* MovieGenres.swift */; };
+		4AB487FF20200C110082E94B /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487FE20200C110082E94B /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4AB487F3201FD3920082E94B /* Updateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updateable.swift; sourceTree = "<group>"; };
 		4AB487F6202001440082E94B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		4AB487F9202002BB0082E94B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4AB487FC202009710082E94B /* MovieGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenres.swift; sourceTree = "<group>"; };
+		4AB487FE20200C110082E94B /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		4AB487F5202001220082E94B /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				4AB487FB202009630082E94B /* Genres */,
 				4AB487F8202002AA0082E94B /* Models */,
 				4AB487F6202001440082E94B /* PreferencesViewController.swift */,
 			);
@@ -112,6 +117,15 @@
 				4AB487F9202002BB0082E94B /* Preferences.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4AB487FB202009630082E94B /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+				4AB487FE20200C110082E94B /* Genre.swift */,
+				4AB487FC202009710082E94B /* MovieGenres.swift */,
+			);
+			path = Genres;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,9 @@
 				4A7243EE201EF135003778CA /* AppDelegate.swift in Sources */,
 				4AB487F7202001440082E94B /* PreferencesViewController.swift in Sources */,
 				4AB487FA202002BB0082E94B /* Preferences.swift in Sources */,
+				4AB487FD202009710082E94B /* MovieGenres.swift in Sources */,
 				4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */,
+				4AB487FF20200C110082E94B /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
