@@ -41,6 +41,14 @@ class PreferencesViewController: UIViewController, UITableViewDelegate {
         preferences.year = newYear
         updateYearLabel(with: newYear)
     }
+    
+    @IBAction func confirmButtonTapped(_ sender: Any) {
+        if let mainVC = presentingViewController as? ViewController {
+            mainVC.receive(preferences: preferences)
+        }
+        
+        dismiss(animated: true)
+    }
 }
 
 // MARK: - Table View Delegate

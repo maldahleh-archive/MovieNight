@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, Resetable {
     private struct Keys {
+        static let PreferencesSegue = "showPreferences"
+        
+        static let SelectedImage = "bubble-selected"
         static let UnselectedImage = "bubble-empty"
     }
     
@@ -19,12 +22,20 @@ class ViewController: UIViewController, Resetable {
     @IBOutlet weak var selectionButton: UIButton!
     
     // MARK: - Class properties
+    var firstPreferences: Preferences?
+    var secondPreferences: Preferences?
+    
     lazy var flowManager = {
         return FlowManager(viewController: self)
     }()
     
     // MARK: - Interface Builder Actions
     @IBAction func selectionButtonTapped(_ sender: Any) {
+        switch flowManager.currentStatus {
+        case .firstPending, .secondPending: performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
+        default: return
+        }
+        
         flowManager.update()
     }
     
@@ -45,5 +56,18 @@ extension ViewController {
         secondPersonStatus.image = UIImage(named: Keys.UnselectedImage)
         
         flowManager.reset()
+    }
+}
+
+// MARK: - Helper methods
+extension ViewController {
+    func receive(preferences: Preferences) {
+        if firstPreferences == nil {
+            firstPreferences = preferences
+            firstPersonStatus.image = UIImage(named: Keys.SelectedImage)
+        } else if secondPreferences == nil {
+            secondPreferences = preferences
+            secondPersonStatus.image = UIImage(named: Keys.SelectedImage)
+        }
     }
 }

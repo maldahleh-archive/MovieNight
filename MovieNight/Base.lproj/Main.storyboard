@@ -39,7 +39,6 @@
                                         </state>
                                         <connections>
                                             <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQU-3G-Qy2"/>
-                                            <segue destination="0Ky-H5-f5O" kind="show" id="MrN-un-deu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,6 +101,7 @@
                         <outlet property="firstPersonStatus" destination="8QH-6U-x0M" id="Tvi-nm-iIN"/>
                         <outlet property="secondPersonStatus" destination="b2g-6A-lez" id="RU9-gv-e76"/>
                         <outlet property="selectionButton" destination="cdr-tO-F6D" id="pCh-Kx-wDa"/>
+                        <segue destination="0Ky-H5-f5O" kind="presentation" identifier="showPreferences" id="mlp-f4-jFx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,6 +131,9 @@
                                         <state key="normal" title="Confirm">
                                             <color key="titleColor" name="Action"/>
                                         </state>
+                                        <connections>
+                                            <action selector="confirmButtonTapped:" destination="0Ky-H5-f5O" eventType="touchUpInside" id="Rxm-6c-41k"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Header"/>
