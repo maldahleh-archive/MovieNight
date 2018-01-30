@@ -35,7 +35,7 @@ class ViewController: UIViewController, Resetable {
         case .firstPending, .secondPending:
             performSegue(withIdentifier: Keys.PreferencesSegue, sender: nil)
             flowManager.update()
-        default: return // TODO: View results button
+        case .complete: displayResults()
         }
     }
     
@@ -71,5 +71,19 @@ extension ViewController {
             secondPreferences = preferences
             secondPersonStatus.image = UIImage(named: Keys.SelectedImage)
         }
+    }
+    
+    func displayResults() {
+        guard let firstPreferences = firstPreferences, let secondPreferences = secondPreferences else {
+            fatalError("Reached combined preference builder without preferences.")
+        }
+        
+        let combinedPreferences = PreferenceBuilder(setOne: firstPreferences, setTwo: secondPreferences)
+        guard let combined = combinedPreferences else {
+            reset()
+            return
+        }
+        
+        // TODO: Display results
     }
 }
