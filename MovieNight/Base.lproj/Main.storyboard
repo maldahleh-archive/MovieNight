@@ -248,23 +248,26 @@
             </objects>
             <point key="canvasLocation" x="931.875" y="424.64788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="uDA-Q5-W7B">
             <objects>
-                <viewController id="Dkw-um-G9s" sceneMemberID="viewController">
+                <viewController id="Dkw-um-G9s" customClass="WebViewController" customModule="MovieNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nLd-Uv-MnL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-0D-GcI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-0D-GcI" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-gh-z9w">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-gh-z9w" userLabel="BackButton">
                                         <rect key="frame" x="276" y="10" width="36" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" name="Action"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="Dkw-um-G9s" eventType="touchUpInside" id="m2d-Dz-axF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Header"/>
@@ -275,7 +278,7 @@
                                     <constraint firstItem="rVe-gh-z9w" firstAttribute="centerY" secondItem="V9X-0D-GcI" secondAttribute="centerY" id="uHf-Mk-bYa"/>
                                 </constraints>
                             </view>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-po-DKO">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-po-DKO" userLabel="WebDetailView">
                                 <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -296,6 +299,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dxa-qh-jv7"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="dlO-po-DKO" id="mN7-kS-cji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bb-Tp-ymi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

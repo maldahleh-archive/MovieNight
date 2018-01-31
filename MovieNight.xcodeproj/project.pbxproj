@@ -29,6 +29,7 @@
 		4A8A488E20212012004A0D46 /* ResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A488D20212012004A0D46 /* ResultsDataSource.swift */; };
 		4A8A4891202121E4004A0D46 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A4890202121E4004A0D46 /* PendingOperations.swift */; };
 		4A8A4893202121FD004A0D46 /* PosterDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A4892202121FD004A0D46 /* PosterDownloader.swift */; };
+		4A8A4898202140F8004A0D46 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A4897202140F8004A0D46 /* WebViewController.swift */; };
 		4AB487ED201FCA0C0082E94B /* SelectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */; };
 		4AB487EF201FCB690082E94B /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487EE201FCB690082E94B /* FlowManager.swift */; };
 		4AB487F2201FCD880082E94B /* Resetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB487F1201FCD880082E94B /* Resetable.swift */; };
@@ -66,6 +67,7 @@
 		4A8A488D20212012004A0D46 /* ResultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataSource.swift; sourceTree = "<group>"; };
 		4A8A4890202121E4004A0D46 /* PendingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 		4A8A4892202121FD004A0D46 /* PosterDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterDownloader.swift; sourceTree = "<group>"; };
+		4A8A4897202140F8004A0D46 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4AB487EC201FCA0C0082E94B /* SelectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionStatus.swift; sourceTree = "<group>"; };
 		4AB487EE201FCB690082E94B /* FlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManager.swift; sourceTree = "<group>"; };
 		4AB487F1201FCD880082E94B /* Resetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resetable.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4A8A488C20211FFE004A0D46 /* DataSources */,
 				4A8A4889202117EA004A0D46 /* Models */,
 				4A8A487F20210386004A0D46 /* ViewModels */,
+				4A8A4896202140CB004A0D46 /* WebView */,
 				4A39C0862020484400A3A7D6 /* ResultsViewController.swift */,
 			);
 			path = Results;
@@ -230,6 +233,14 @@
 				4A7243EF201EF135003778CA /* ViewController.swift */,
 			);
 			path = Overview;
+			sourceTree = "<group>";
+		};
+		4A8A4896202140CB004A0D46 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A4897202140F8004A0D46 /* WebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		4AB487EB201FC9F70082E94B /* SelectionFlow */ = {
@@ -374,6 +385,7 @@
 				4A8A4888202116BE004A0D46 /* IMDBClient.swift in Sources */,
 				4A8A487E20210250004A0D46 /* ResultCell.swift in Sources */,
 				4AB487F2201FCD880082E94B /* Resetable.swift in Sources */,
+				4A8A4898202140F8004A0D46 /* WebViewController.swift in Sources */,
 				4A39C08420203FA000A3A7D6 /* AlertPresenter.swift in Sources */,
 				4A39C0782020373400A3A7D6 /* Endpoint.swift in Sources */,
 				4A8A488E20212012004A0D46 /* ResultsDataSource.swift in Sources */,
