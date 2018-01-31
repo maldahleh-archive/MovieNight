@@ -4,7 +4,7 @@ MovieNight is an iOS application that allows two users to select their preferenc
 You need your own IMDB API key to use this app.
 
 ## Screenshots
-To Be Added
+<p align="center"><img src="https://i.imgur.com/7SYkuP8.png" width="200"> <img src="https://i.imgur.com/pvOee6Z.png" width="200"> <img src="https://i.imgur.com/sNjbvXu.jpg" width="200"> <img src="https://i.imgur.com/EYUGsVX.jpg" width="200"> </p>
 
 ## Project Instructions
 For this project you will be building an app to help two friends agree on what movie to watch. The two persons will be using with the same iPhone with the app installed, simply by handing it back and forth between them. Your app will access The Movie Database (https://www.themoviedb.org). Unlike the Star Wars API which you used for project 5, the Movie Database API is not completely open, hence an API key is required. You need to request the API key as one of the first steps.
