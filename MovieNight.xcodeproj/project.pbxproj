@@ -164,7 +164,7 @@
 				4A39C08220203F9200A3A7D6 /* Alerts */,
 				4AB487F5202001220082E94B /* Preferences */,
 				4A39C0852020482100A3A7D6 /* Results */,
-				4A8A489420213C18004A0D46 /* Overview */,
+				4A8A489420213C18004A0D46 /* MainInterface */,
 				4A39C0702020356000A3A7D6 /* Networking */,
 				4AB487F0201FCD7C0082E94B /* Utilities */,
 				4A7243ED201EF135003778CA /* AppDelegate.swift */,
@@ -226,13 +226,13 @@
 			path = Posters;
 			sourceTree = "<group>";
 		};
-		4A8A489420213C18004A0D46 /* Overview */ = {
+		4A8A489420213C18004A0D46 /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
 				4AB487EB201FC9F70082E94B /* SelectionFlow */,
 				4A7243EF201EF135003778CA /* ViewController.swift */,
 			);
-			path = Overview;
+			path = MainInterface;
 			sourceTree = "<group>";
 		};
 		4A8A4896202140CB004A0D46 /* WebView */ = {

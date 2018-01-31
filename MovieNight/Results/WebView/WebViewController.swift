@@ -14,13 +14,21 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     
     // MARK: - Class Properties
+    var type: MediaType!
+    var result: MediaResult!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let spacedUrl = "\(type.tmdbUrl)\(result.id) \(result.title.lowercased())"
+        let joinedUrl = spacedUrl.replacingOccurrences(of: " ", with: "-")
+        
+        guard let url = URL(string: joinedUrl) else {
+            fatalError("URL construction failed, url: \(joinedUrl)")
+        }
+        
         webView.allowsBackForwardNavigationGestures = true
-        
-        
+        webView.load(URLRequest(url: url))
     }
     
     // MARK: - UI actions

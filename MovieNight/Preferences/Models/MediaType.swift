@@ -12,6 +12,13 @@ enum MediaType: String {
 }
 
 extension MediaType {
+    var tmdbUrl: String {
+        switch self {
+        case .movies: return "https://www.themoviedb.org/movie/"
+        case .tvShows: return "https://www.themoviedb.org/tv/"
+        }
+    }
+    
     var yearQueryString: String {
         switch self {
         case .movies: return "primary_release_date.gte"
@@ -24,6 +31,10 @@ extension MediaType {
 extension MediaType {
     var posterJsonKey: String {
         return "poster_path"
+    }
+    
+    var idJsonKey: String {
+        return "id"
     }
     
     var titleJsonKey: String {
