@@ -57,9 +57,10 @@ extension ViewController {
         if segue.identifier != Keys.ResultsSegue { return }
         
         let destination = segue.destination as! ResultsViewController
-        let results = sender as! [MediaResult]
+        let media = sender as! ([MediaResult], MediaType)
         
-        destination.results = results
+        destination.mediaType = media.1
+        destination.results = media.0
     }
 }
 
@@ -92,7 +93,7 @@ extension ViewController {
                 AlertPresenter.displayAlertWith(message: "Network failed, \(error.description).", viewController: self)
                 self.reset()
             case .success(let media):
-                self.performSegue(withIdentifier: Keys.ResultsSegue, sender: media)
+                self.performSegue(withIdentifier: Keys.ResultsSegue, sender: (media, combined.mediaType))
             }
         }
     }

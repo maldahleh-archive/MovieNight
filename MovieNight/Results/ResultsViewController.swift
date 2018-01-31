@@ -11,6 +11,8 @@ import UIKit
 class ResultsViewController: UIViewController, UITableViewDelegate {
     private struct Constants {
         static let ResultCellHeight: CGFloat = 113.0
+        
+        static let WebSegue = "toWebView"
     }
     
     // MARK: - Interface Builder Outlets
@@ -21,6 +23,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate {
         return ResultsDataSource(results: results, controller: self)
     }()
     
+    var mediaType: MediaType!
     var results: [MediaResult]!
 
     override func viewDidAppear(_ animated: Bool) {
@@ -33,5 +36,22 @@ class ResultsViewController: UIViewController, UITableViewDelegate {
     // MARK: - Table View Delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.ResultCellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.WebSegue, sender: results[indexPath.row])
+    }
+}
+
+// MARK: - Navigation
+extension ResultsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != Constants.WebSegue { return }
+        
+        let selected = sender as! MediaResult
+        let destinationVC = segue.destination as! WebViewController
+        
+        destinationVC.type = mediaType
+        destinationVC.result = selected
     }
 }
