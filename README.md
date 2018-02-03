@@ -1,5 +1,5 @@
 # MovieNight
-MovieNight is an iOS application that allows two users to select their preferences for movies or TV shows, the app will then fetch matches from the TMDB API and display them.
+Movie Night is an iOS application that allows two users to select their preferences for movies or TV shows, the app will then fetch matches from the TMDB API and display them.
 
 You need your own TMDB API key to use this app.
 
