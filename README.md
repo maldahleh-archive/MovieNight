@@ -1,7 +1,7 @@
 # MovieNight
 Movie Night is an iOS application that allows two users to select their preferences for movies or TV shows, the app will then fetch matches from the TMDB API and display them.
 
-You need your own TMDB API key to use this app.
+You need your own TMDB API key to use this app, this can be obtained at https://www.themoviedb.org
 
 ## Screenshots
 <p align="center"><img src="https://i.imgur.com/7SYkuP8.png" width="200"> <img src="https://i.imgur.com/pvOee6Z.png" width="200"> <img src="https://i.imgur.com/sNjbvXu.jpg" width="200"> <img src="https://i.imgur.com/EYUGsVX.jpg" width="200"> </p>
