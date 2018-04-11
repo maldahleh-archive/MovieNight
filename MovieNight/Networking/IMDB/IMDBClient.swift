@@ -22,7 +22,7 @@ class IMDBClient: APIClient {
         
         fetch(with: request, parse: { json -> [MediaResult] in
             guard let mediaResults = json["results"] as? [JSON] else { return [] }
-            return mediaResults.flatMap { MediaResult(json: $0, mediaType: preferences.mediaType) }
+            return mediaResults.compactMap { MediaResult(json: $0, mediaType: preferences.mediaType) }
         }, completion: completion)
     }
 }
